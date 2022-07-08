@@ -1,0 +1,19 @@
+2022-07-05 12:05:09,927 [myid:] - INFO  [main:QuorumPeerConfig@174] - Reading configuration from: /home/hung/zookeeper_cluster/zkNode3/bin/../conf/zoo.cfg
+2022-07-05 12:05:09,932 [myid:] - INFO  [main:QuorumPeerConfig@444] - clientPortAddress is 0.0.0.0:2183
+2022-07-05 12:05:09,932 [myid:] - INFO  [main:QuorumPeerConfig@448] - secureClientPort is not set
+2022-07-05 12:05:09,932 [myid:] - INFO  [main:QuorumPeerConfig@464] - observerMasterPort is not set
+2022-07-05 12:05:09,932 [myid:] - INFO  [main:QuorumPeerConfig@481] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2022-07-05 12:05:09,938 [myid:] - ERROR [main:QuorumPeerMain@99] - Invalid config, exiting abnormally
+org.apache.zookeeper.server.quorum.QuorumPeerConfig$ConfigException: Error processing /home/hung/zookeeper_cluster/zkNode3/bin/../conf/zoo.cfg
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:198)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:125)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:91)
+Caused by: java.lang.IllegalArgumentException: myid file is missing
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.checkValidity(QuorumPeerConfig.java:796)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.setupQuorumPeerConfig(QuorumPeerConfig.java:667)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parseProperties(QuorumPeerConfig.java:491)
+	at org.apache.zookeeper.server.quorum.QuorumPeerConfig.parse(QuorumPeerConfig.java:194)
+	... 2 more
+Invalid config, exiting abnormally
+2022-07-05 12:05:09,941 [myid:] - INFO  [main:ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2022-07-05 12:05:09,942 [myid:] - ERROR [main:ServiceUtils@48] - Exiting JVM with code 2
